@@ -51,8 +51,8 @@ my_init_module(void)
     unsigned long mmDataHead_Offset = 0, mmDataTail_Offset = 0;  
     unsigned long mmHeapHead_Offset = 0, mmHeapTail_Offset = 0;
     unsigned long mmStack_Offset = 0;
-    unsigned long mmapList_Offset = 0;  //offset for list of VMAs (struct vm_area_struct *mmap)
-    
+    unsigned long vmaHead_Offset = 0;  //offset for list of VMAs (struct vm_area_struct *mmap)
+
     //Offsets for data within mm_struct
     unsigned long vm_start_Offset = 0;
     unsigned long vm_end_Offset = 0;
