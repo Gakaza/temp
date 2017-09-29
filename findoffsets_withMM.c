@@ -82,11 +82,11 @@ my_init_module(void)
 		vmaHead_Offset = (unsigned long) (&(p->mm->mmap)) - (unsigned long) (p->mm);
 		
 		//Calculating Offsets within vm_area_struct (VMA)
-		vm_start_Offset = (unsigned long) (&(p->mm->mmap->vm_start)) - (unsigned long) (p->mm);
-		vm_end_Offset = (unsigned long) (&(p->mm->mmap->vm_end)) - (unsigned long) (p->mm);
-		vm_next_Offset = (unsigned long) (&(p->mm->mmap->vm_next)) - (unsigned long) (p->mm);
-		vm_prev_Offset = (unsigned long) (&(p->mm->mmap->vm_prev)) - (unsigned long) (p->mm);
-		vm_mm_Offset = (unsigned long) (&(p->mm->mmap->vm_mm)) - (unsigned long) (p->mm);
+		vm_start_Offset = (unsigned long) (&(p->mm->mmap->vm_start)) - (unsigned long) (p->mm->mmap);
+		vm_end_Offset = (unsigned long) (&(p->mm->mmap->vm_end)) - (unsigned long) (p->mm->mmap);
+		vm_next_Offset = (unsigned long) (&(p->mm->mmap->vm_next)) - (unsigned long) (p->mm->mmap);
+		vm_prev_Offset = (unsigned long) (&(p->mm->mmap->vm_prev)) - (unsigned long) (p->mm->mmap);
+		vm_mm_Offset = (unsigned long) (&(p->mm->mmap->vm_mm)) - (unsigned long) (p->mm->mmap);
 		
 		
 		
